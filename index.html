@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="ext/bootstrap.min.css">
+    <link rel="stylesheet" href="ext/dataTables.bootstrap4.min.css">
+
+    <title>E-Mail an Mitglieder</title>
+
+  </head>
+
+  <body>
+    <script src="ext/jquery-3.4.1.min.js"></script>
+    <script src="ext/popper.min.js"></script>
+    <script src="ext/bootstrap.min.js"></script>
+    <script src="ext/jquery.dataTables.min.js"></script>
+    <script src="ext/dataTables.bootstrap4.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <div class="container">
+
+      <h1>E-Mail an Mitglieder</h1>
+
+      <div class="container">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_A" autocomplete="off" checked>Aktiv</label>
+          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_P" autocomplete="off" checked>Passiv</label>
+          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_F" autocomplete="off" checked>Fördernd</label>
+        </div>
+      </div>
+      <p/>
+
+      <div class="container">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-light active"><input type="checkbox" name="options" id="ort_W" autocomplete="off" checked>Wachendorf</label>
+          <label class="btn btn-light active"><input type="checkbox" name="options" id="ort_E" autocomplete="off" checked>Egersdorf</label>
+        </div>
+      </div>
+      <p/>
+
+      <div class="container">
+        <label class="btn btn-light"><input type="checkbox" name="options" id="ausschuss" autocomplete="off" checked>Ausschuss</label>
+      </div>
+      <p/>
+
+      <div class="container">
+        <label class="btn btn-light"><input type="checkbox" name="options" id="jugend" autocomplete="off">Jugend</label>
+      </div>
+      <p/>
+
+
+      <table id="mails" class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>E-Mail</th>
+          <th>Status</th>
+          <th>Ort</th>
+          <th>Ausschuss</th>
+          <th>Jugend</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <p/>
+      <a id="btn-send" class="btn btn-primary" href="mailto:Mitglieder: ;">E-Mail verfassen</a>
+    </div>
+  </body>
+</html>
