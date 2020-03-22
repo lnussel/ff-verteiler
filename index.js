@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 
   var table = $('#mails').DataTable( {
-    ajax: "/mails.json",
+    ajax: "mails.json",
     'dataSrc': 'data',
     "columnDefs": [
       {
