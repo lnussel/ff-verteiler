@@ -1,5 +1,4 @@
-mails.json:
-	curl -s 'http://127.0.0.1:8000/ffalt/mitglieder/email?format=json&columns=name_vorname,email,apkz,ort,vorstand,jugend' > mails.json
+-include Makefile.local
 
 assets: ext/jquery-3.4.1.min.js ext/popper.min.js ext/bootstrap.min.css ext/bootstrap.min.js ext/jquery.dataTables.min.js ext/dataTables.bootstrap4.min.js ext/dataTables.bootstrap4.min.css 
 
@@ -18,4 +17,4 @@ ext/dataTables.bootstrap4.min.js:
 ext/dataTables.bootstrap4.min.css:
 	cd ext && wget "https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
 
-.PHONY: assets
+.PHONY: assets mails.json upload
