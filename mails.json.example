@@ -1,0 +1,20 @@
+{
+   "data" : [
+      [
+         "Max Mustermann",
+         "max@example.com",
+         "Aktiv",
+         "Musterstadt",
+         "True",
+         "False"
+      ],
+      [
+         "Erika Mustermann",
+         "erika@example.com",
+         "Passiv",
+         "Musterhausen",
+         "False",
+         "True"
+      ]
+   ]
+}
