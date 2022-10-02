@@ -25,29 +25,29 @@
       <h1>E-Mail an Mitglieder</h1>
 
       <div class="container">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_A" autocomplete="off" checked>Aktiv</label>
-          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_P" autocomplete="off" checked>Passiv</label>
-          <label class="btn btn-light active"><input type="checkbox" name="options" id="status_F" autocomplete="off" checked>Fördernd</label>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-light active"><input class="mr-1" type="checkbox" name="options" id="status_A" autocomplete="off" checked>Aktiv</label>
+          <label class="btn btn-light active"><input class="mr-1" type="checkbox" name="options" id="status_P" autocomplete="off" checked>Passiv</label>
+          <label class="btn btn-light active"><input class="mr-1" type="checkbox" name="options" id="status_F" autocomplete="off" checked>Fördernd</label>
         </div>
       </div>
       <p/>
 
       <div class="container">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-light active"><input type="checkbox" name="options" id="ort_W" autocomplete="off" checked>Wachendorf</label>
-          <label class="btn btn-light active"><input type="checkbox" name="options" id="ort_E" autocomplete="off" checked>Egersdorf</label>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-light active"><input class="mr-1" type="checkbox" name="options" id="ort_W" autocomplete="off" checked>Wachendorf</label>
+          <label class="btn btn-light active"><input class="mr-1" type="checkbox" name="options" id="ort_E" autocomplete="off" checked>Egersdorf</label>
         </div>
       </div>
       <p/>
 
       <div class="container">
-        <label class="btn btn-light"><input type="checkbox" name="options" id="ausschuss" autocomplete="off" checked>Ausschuss</label>
+        <label class="btn btn-light"><input class="mr-1" type="checkbox" name="options" id="ausschuss" autocomplete="off" checked>Ausschuss</label>
       </div>
       <p/>
 
       <div class="container">
-        <label class="btn btn-light"><input type="checkbox" name="options" id="jugend" autocomplete="off">Jugend</label>
+        <label class="btn btn-light"><input class="mr-1" type="checkbox" name="options" id="jugend" autocomplete="off">Jugend</label>
       </div>
       <p/>
 
@@ -65,8 +65,18 @@
         </tbody>
       </table>
 
-      <p/>
-      <a id="btn-send" class="btn btn-primary" href="mailto:Mitglieder: ;">E-Mail verfassen</a>
+      <div class="container py-5">
+	<div class="btn-group" role="group">
+	  <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    E-Mail verfassen
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+	    <a class="dropdown-item" id="btn-send" href="#">Empfänger nicht sichtbar (empfohlen)</a>
+	    <a class="dropdown-item" id="btn-send-to" href="#">Empfänger sichbar</a>
+	  </div>
+	</div>
+	<button type="button" id="btn-copy" class="btn btn-primary" data-toggle="popover" data-content="Kopiert!">Kopieren</a>
+      </div>
     </div>
   </body>
 </html>

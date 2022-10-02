@@ -73,4 +73,21 @@ $(document).ready(function() {
       return true;
     }
   );
+
+  $('#btn-copy').popover();
+  $('#btn-copy').on('click', function(){
+    var addrs = []
+    table.column(1, {search: 'applied'}).data()
+      .each( function ( value, index ) {
+        addrs.push(value);
+      } );
+    console.log("copy to clipboard " + addrs.join(" "));
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(addrs.join(";")).select();
+    document.execCommand("copy");
+    $temp.remove();
+    $('#btn-copy').popover('show');
+    setTimeout(function(){$('#btn-copy').popover('hide');}, 2000);
+  });
 });
