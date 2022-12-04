@@ -45,6 +45,8 @@ $(document).ready(function() {
     var $btn = $('#btn-send');
     console.log($btn.prop('href'))
     $btn.prop('href', "mailto:Mitglieder: ;?bcc=" + addrs.join(','));
+    $btn = $('#btn-send-to');
+    $btn.prop('href', "mailto:Mitglieder: ;?to=" + addrs.join(','));
   } );
 
   $.fn.dataTable.ext.search.push(
